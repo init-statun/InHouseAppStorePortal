@@ -1,0 +1,55 @@
+{
+  "fields": [
+    {
+      "name": "firstName",
+      "type": "text",
+      "label": "First Name",
+      "validators": {
+        "required": true,
+        "minLength": 2,
+        "maxLength": 30,
+        "pattern": "^[A-Za-z]+$"
+      },
+      "errorMsgs": {
+        "required": "First Name is required.",
+        "minLength": "First Name must be at least 2 characters long.",
+        "maxLength": "First Name can't exceed 30 characters.",
+        "pattern": "First Name can only contain letters."
+      }
+    },
+    {
+      "name": "email",
+      "type": "email",
+      "label": "Email",
+      "validators": {
+        "required": true,
+        "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$"
+      },
+      "errorMsgs": {
+        "required": "Email is required.",
+        "pattern": "Please enter a valid email address."
+      }
+    },
+    {
+      "name": "gender",
+      "type": "select",
+      "label": "Gender",
+      "options": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "validators": {
+        "required": true
+      },
+      "errorMsgs": {
+        "required": "Gender is required."
+      }
+    },
+    {
+      "name": "subscribe",
+      "type": "checkbox",
+      "label": "Subscribe to Newsletter"
+    }
+  ]
+}

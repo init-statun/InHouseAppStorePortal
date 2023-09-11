@@ -1,0 +1,78 @@
+{
+     "fields": [
+          {
+               "name": "firstName",
+               "type": "text",
+               "label": "First Name",
+               "validators": {
+                    "required": true,
+                    "minLength": 2,
+                    "maxLength": 30,
+                    "pattern": "^[A-Za-z]+$"
+               },
+               "errorMsgs": {
+                    "required": "First Name is required.",
+                    "minLength": "First Name must be at least 2 characters long.",
+                    "maxLength": "First Name can't exceed 30 characters.",
+                    "pattern": "First Name can only contain letters."
+               }
+          },
+          {
+               "name": "loginName",
+               "type": "text",
+               "label": "Login Name",
+               "validators": {
+                    "required": true,
+                    "minLength": 2,
+                    "maxLength": 30,
+                    "pattern": "^[A-Za-z]+$"
+               },
+               "errorMsgs": {
+                    "required": "Login Name is required.",
+                    "minLength": "Login Name must be at least 2 characters long.",
+                    "maxLength": "Login Name can't exceed 30 characters.",
+                    "pattern": "Login Name can only contain letters."
+               }
+          },
+          {
+               "name": "email",
+               "type": "email",
+               "label": "Email",
+               "validators": {
+                    "required": true,
+                    "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$"
+               },
+               "errorMsgs": {
+                    "required": "Email is required.",
+                    "pattern": "Please enter a valid email address."
+               }
+          },
+          {
+               "name": "phoneNumber",
+               "type": "text",
+               "label": "Number",
+               "validators": {
+                    "required": true,
+                    "pattern": "^[0-9]{10}"
+               },
+               "errorMsgs": {
+                    "required": "Number is required.",
+                    "pattern": "Please enter a valid 10-digit phone number."
+               }
+          },
+          {
+               "name": "password",
+               "type": "password",
+               "label": "Password",
+               "validators": {
+                    "required": true,
+                    "minLength": 2,
+                    "maxLength": 30,
+                    "pattern": "^[A-Za-z]+$"
+               },
+               "errorMsgs": {
+                    "required": "Password is required."
+               }
+          }
+     ]
+}

@@ -1,0 +1,44 @@
+a {
+     font-size: 14px;
+     font-weight: 700
+}
+
+.superNav {
+     font-size: 13px;
+}
+
+.form-control {
+     outline: none !important;
+     box-shadow: none !important;
+}
+
+@media screen and (max-width:540px) {
+     .centerOnMobile {
+          text-align: center
+     }
+}
+
+
+
+
+
+#circleIcon {
+     width: 60px;
+     height: 60px;
+     line-height: 60px;
+     border: 2px dotted #232323;
+     border-radius: 100%;
+     text-align: center;
+}
+
+.nav-icon {
+     background-image: url('../../../assets/images/mobile.png');
+     background-repeat: no-repeat;
+     background-size: 101% 100%;
+     background-blend-mode: overlay;
+}
+
+.customLink>a {
+     text-decoration: none;
+     color: #232323;
+}

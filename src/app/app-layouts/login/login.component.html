@@ -1,0 +1,29 @@
+<form #myForm="ngForm">
+     <label for="numberInput">Enter 1 Number:</label>
+     <input type="text" id="numberInput" name="numberInput" [(ngModel)]="userInput" required minlength="8"
+          (input)="validateInput()">
+     <div>
+          <ul>
+               <li [ngClass]="{ 'text-success': isMinLengthValid, 'text-danger': !isMinLengthValid }">
+                    Must include at least 8 characters
+               </li>
+               <li [ngClass]="{ 'text-success': isUppercaseValid, 'text-danger': !isUppercaseValid }">
+                    Must include an uppercase letter
+               </li>
+               <li [ngClass]="{ 'text-success': isNumberValid, 'text-danger': !isNumberValid }">
+                    Must include a number character
+               </li>
+               <li [ngClass]="{ 'text-success': isSymbolValid, 'text-danger': !isSymbolValid }">
+                    Must include a supported symbol
+               </li>
+          </ul>
+     </div>
+
+     <button [disabled]="!isFormValid">Submit</button>
+</form>
+
+<div class="progress">
+     <div class="progress-bar text-success" role="progressbar" [style.width]="100 + '%'" style="height: 10px;">
+          {{ progress }}%
+     </div>
+</div>
